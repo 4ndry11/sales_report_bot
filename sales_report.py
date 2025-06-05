@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 b24 = B24(domain="ua.zvilnymo.com.ua", user_id=596, token="wo0wme6ciueuv8cf")
 
@@ -174,7 +175,7 @@ fig.savefig('sales_report.png', bbox_inches='tight', dpi=300)
 
 #Отправляем данные в телеграм бота
 
-TOKEN = "8024442492:AAEOg60JnXOC4OpIHqwAWeLwptQMrHwHQ3o"
+TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 
 chat_ids = [727013047, 718885452, 6775209607, 1139941966, 332270956]
 
